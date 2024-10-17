@@ -1,0 +1,20 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.name }}
+spec:
+  ingressClassName: {{ .Values.ingressClassName }}
+  rules:
+  - host: ppony.infra.net
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ppony-hello-world
+            port:
+              number: 80
+  tls:
+    - secretName: infra-certs

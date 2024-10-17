@@ -1,0 +1,4 @@
+---
+ingress:
+  name: ppony
+  ingressClassName: nginx
