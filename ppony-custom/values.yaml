@@ -1,5 +1,4 @@
 ---
-ppony-custom:
-  ingress:
-    name: ppony
-    ingressClassName: nginx
+ingress:
+  name: ppony
+  ingressClassName: nginx
